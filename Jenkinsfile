@@ -20,7 +20,7 @@ pipeline{
         stage('Countinuous Deploy'){
             steps{
                  script{
-               cicd.deployv("DeclarativePipeline","172.31.15.226","testtest")
+               cicd.deployv("DeclarativePipeline","172.31.15.226","t")
                  }
                    
             }
@@ -38,7 +38,7 @@ pipeline{
     post{
         success{
              script{
-            cicd.deployv("DeclarativePipeline","172.31.7.50","prodprod") 
+            cicd.deployv("DeclarativePipeline","172.31.7.50","p") 
              }
  }
     }
