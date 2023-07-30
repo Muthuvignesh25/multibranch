@@ -17,31 +17,7 @@ pipeline{
                  }
             }
          }
-        stage('Countinuous Deploy'){
-            steps{
-                 script{
-               cicd.deployv("DeclarativePipeline","172.31.15.226","testtest")
-                 }
-                   
-            }
-       
-         }
-        stage('Continuous Testing'){
-            steps{
-                 script{
-                 cicd.gitv("FunctionalTesting")
-                cicd.testv("DeclarativePipeline")
-                 }
-            }
-        }   
-    }
-    post{
-        success{
-             script{
-            cicd.deployv("DeclarativePipeline","172.31.7.50","prodprod") 
-             }
- }
-    }
+      }
    
 }
 
